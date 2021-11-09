@@ -1,0 +1,356 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: clamp(14px, 1.75vw, 18px);
+  }
+  
+  body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: #f7f6ff;
+  }
+  
+  body.pancakeStack {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  body > * {
+    padding: 2vh 5vw;
+  }
+  
+  header,
+  footer {
+    background-color: #6E2FEC;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header a {
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  header > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  header h1 {
+    font-size: 1.25rem;
+  }
+  
+  header img {
+    width: 8vmin;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 0.5em;
+  }
+  
+  header nav a {
+    --padding: 0.5em;
+    position: relative;
+    padding: var(--padding);
+    text-align: center;
+  }
+  
+  header nav a::after {
+    position: absolute;
+    content: "";
+    bottom: 0.2em;
+    inset-inline: var(--padding);
+  
+    height: 2px;
+    background-color: currentColor;
+  
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+  }
+  
+  header nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  main {
+    display: flex;
+    margin-left: -40px;
+    text-align: left;
+    flex-flow: column;
+    font-size: 15px;
+    gap: 1em;
+  }
+  
+  #feedback {
+    display: flex;
+    gap: 0.5em;
+  
+    width: max-content;
+    margin-inline: auto;
+  }
+  
+  #feedback * {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.4em;
+  }
+
+  .text3 {
+    display: flex;
+    text-align: left;
+    margin-right: -40px;
+    position:absolute;
+    flex-flow: column;
+    bottom: 240px;
+    font-size: 15px;
+    right:-15px;
+    gap: 1em;
+  }
+
+   footer img {
+    width: 100px;
+    height: auto;
+    margin-left: 1750px;
+    margin-top: -75px;
+    border-radius: 50%;
+  }
+
+  .img3 {
+    width: 0px;
+  height: 0px;
+  right: 60px;
+  bottom: 750px;
+  border-radius: 50px;
+  position:absolute;
+  right:850px;
+  }
+
+  .img4 {
+    width: 0px;
+    height: 0px;
+    right: 80px;
+    bottom: 450px;
+    border-radius: 50px;
+    position:absolute;
+    right:850px;
+    }
+    footer {
+    --padding: 2.5em;
+    position: relative;
+    padding: var(--padding);
+    text-align: left;
+    }
+
+  form {
+    padding: 20px;
+    margin-top: -80px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .form-group input,
+
+  textarea {
+    width: 400px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+
+  }
+
+  textarea {
+    width: 400px;
+    height: 80px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+  input.invalid {
+    border: 1px solid red;
+  }
+
+  .error-hint {
+    color: red;
+    font-size: 14px;
+  }
+
+  hr {
+    height: 1px;
+    background-color:white;
+    border: none;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  button {
+    padding: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: all 0.3s;
+    cursor:pointer;
+    font-size: 18px;
+  }
+
+  button:hover {
+    background-color: white;
+    border: black;
+    color: black;
+
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .thank-you {
+    padding: 40px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+  }
+
+  .text1 {
+  color: white;
+  right: 1525px;
+  position: absolute;
+  top: 25px;
+
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+    margin-left: 475px;
+  }
+  
+  .dropdown .dropdown-toggle {
+    appearance: none;
+    margin-top: 40px;
+    padding: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    background: none;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: all 0.3s;
+    cursor:pointer;
+    font-size: 18px;
+    padding: 12px 35px 12px 12px;
+    text-align: left;
+    position: relative;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .dropdown .dropdown-toggle::after {
+    content: '';
+    border-width: 6px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: inherit;
+    position: absolute;
+    right: 12px;
+    top: calc(50% + 3px);
+    transform: translateY(-50%);
+  }
+  
+  .dropdown .dropdown-toggle.active::after {
+    border-color: transparent;
+    border-bottom-color: inherit;
+    top: calc(50% - 3px);
+  }
+  
+  .dropdown .dropdown-menu {
+    position: absolute;
+    left: 12%;
+    bottom: -280%;
+    transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 0 1px 4px (150, 150, 150, 0.65);
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    max-width: 320px;
+    width: calc(100% + 24px);
+    border-radius: 3px;
+    z-index: 10;
+    visibility: hidden;
+    overflow: auto;
+    max-height: 200px;
+  }
+  
+  .dropdown .dropdown-menu[aria-expanded="true"] {
+    visibility: visible;
+    margin-bottom: 80px;
+  }
+  
+  .dropdown .dropdown-menu > li {
+    height: 40px;
+    display: block;
+    align-items: center;
+    color: #777;
+    padding: 10px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .dropdown .dropdown-menu > li:hover,
+  .dropdown .dropdown-menu > li:focus {
+    outline: none;
+    background: #f2f2f2;
+  }
+
+  .text1 {
+    color: white;
+    margin-right: -200px;
+    font-size: 20px;
+    
+  }
+
+
